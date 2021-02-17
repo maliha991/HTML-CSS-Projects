@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Global styling */
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+li {
+  font-size: 2rem;
+  list-style: none;
+}
+
+button {
+  border: none;
+  font-size: 1.8rem;
+  background-color: rgb(69, 108, 141);
+  color: white;
+  cursor: pointer;
+  margin: 3rem;
+  padding: 1.9rem 5.8rem;
+  transition: background 0.5s ease-in-out;
+}
+button:hover {
+  background: rgb(35, 55, 71);
+}
+
+/* Button Focus to make website accessible through keyboard */
+
+button:focus {
+  background: rgb(35, 56, 75);
+  outline-style: solid;
+  outline-color: white;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Nav styling */
+
+.main-head {
+  background: #131c27;
+  color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+}
+
+nav {
+  display: flex;
+  padding: 2rem;
+  min-height: 10vh;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+}
+
+#logo {
+  flex: 2 1 50rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+.hero {
+  min-height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), transparent),
+    url(./img/landing-page.jpg);
+
+  /* in rgba --> a is the opacity here */
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h2,
+h3 {
+  margin-top: 1.8rem;
+  padding: 1.8rem 5.5rem;
+}
+
+/* Locations styling */
+
+#locations {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url(./img/new-york-page.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  font-size: 4.9rem;
+}
+
+.locations-head h3 {
+  padding: 3rem 0 2rem 0;
+  /* color: rgb(51, 51, 51); */
+  background: linear-gradient(#131c27, #663b34);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  pointer-events: none;
+}
+
+.moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 5s infinite alternate ease-in-out;
+}
+
+/* Animations */
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Benefits styling */
+
+#benefits {
+  min-height: 100vh;
+}
+
+.benefits-head {
+  /* height: 30%; */
+  background: #343c44;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.benefits-head h2 {
+  padding-top: 2rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background: white;
+  min-height: 60vh;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.card {
+  flex: 1 1 25rem;
+  min-height: 44vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  height: 90px;
+  background: rgb(35, 55, 71);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards img {
+  max-width: 15%;
+}
+
+.card h4,
+.card p {
+  padding: 1rem;
+  line-height: 1.8;
+}
+
+/* Contact Styling */
+
+#contact {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url(./img/contact-mountain.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  width: 60%;
+  background: rgba(19, 28, 39, 0.8);
+  color: white;
+  /* height: 65vh; */
+  border-radius: 2rem;
+}
+
+.form-head {
+  padding: 4rem 0 3rem 0;
+  text-align: center;
+}
+
+.name-form,
+.email-form {
+  padding: 3rem 0 3rem 0;
+  text-align: center;
+}
+
+.name-form label,
+.email-form label {
+  font-size: 2rem;
+  padding: 0 3rem 0 0;
+}
+
+.name-form input,
+.email-form input {
+  padding: 1rem;
+  width: 27rem;
+  font-size: 2rem;
+}
+
+.form-wrapper button {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-top: 7.5rem;
+  padding: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+/* Footer Styling */
+
+footer {
+  background: rgb(19, 28, 39);
+}
+
+.footer-wrapper {
+  color: white;
+  display: flex;
+  padding: 2rem;
+  min-height: 10vh;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-wrapper h4 {
+  flex: 1 1 40rem;
+}
+
+.footer-wrapper ul {
+  display: flex;
+  align-items: center;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+}
+
+/* .footer-wrapper a {
+  padding: 0 5rem 0 15rem;
+} */
+
+/* Responsive */
+
+/* Mobile Friendly */
+
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
+  }
+
+  /* Hero Section */
+
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 2rem;
+  }
+
+  /* Locations Section */
+
+  .locations-head h3 {
+    background: rgba(19, 28, 39, 0.8);
+    -webkit-text-fill-color: white;
+    padding-left: 3.5rem;
+    padding-right: 2rem;
+  }
+
+  .cloud {
+    height: 40rem;
+  }
+
+  .moving-cloud-1 {
+    z-index: -1;
+  }
+
+  .moving-cloud-2 {
+    z-index: -2;
+    top: 10%;
+    height: 30rem;
+  }
+
+  /* From Section */
+
+  .form-wrapper {
+    width: 100%;
+  }
+
+  /* Footer Section */
+
+  footer {
+    text-align: center;
+  }
+
+  footer h4 {
+    padding-bottom: 3rem;
+  }
+}
+
+/* Tab and ipad friendly */
+
+@media screen and (max-width: 1044px) {
+  nav {
+  }
+}
